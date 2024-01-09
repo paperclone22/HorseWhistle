@@ -1,31 +1,31 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "horse_whistle",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Horse Whistle",
+	"description": "A whistle that can summon your horse from anywhere in the world.",
 	"authors": [
-		"Me!"
+		"Jboss"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/jbossjaslow/HorseWhistle"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"license": "MIT",
+	"icon": "assets/horse_whistle/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"io.github.jbossjaslow.horse_whistle.HorseWhistle"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+			"io.github.jbossjaslow.horse_whistle.HorseWhistleClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"horse_whistle.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "horse_whistle.client.mixins.json",
 			"environment": "client"
 		}
 	],
