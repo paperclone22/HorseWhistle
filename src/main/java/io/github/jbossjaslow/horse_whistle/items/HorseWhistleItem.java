@@ -1,5 +1,6 @@
 package io.github.jbossjaslow.horse_whistle.items;
 
+import io.github.jbossjaslow.horse_whistle.HorseWhistle;
 import io.github.jbossjaslow.horse_whistle.util.HotBarUtil;
 import io.github.jbossjaslow.horse_whistle.util.NBTUtil;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -39,7 +40,7 @@ public class HorseWhistleItem extends Item {
     public HorseWhistleItem(FabricItemSettings settings) {
         super(
                 settings
-                        .maxDamage(16)
+                        .maxDamage(HorseWhistle.CONFIG.durability())
                         .rarity(Rarity.RARE)
         );
     }
@@ -83,7 +84,7 @@ public class HorseWhistleItem extends Item {
             }
 
             String associatedHorseIdString = NBTUtil.getNBTFrom(stack, HORSE_ID_KEY);
-            double radius = 500;
+            double radius = HorseWhistle.CONFIG.searchRadius();
             double xPos = user.getX();
             double yPos = user.getY();
             double zPos = user.getZ();

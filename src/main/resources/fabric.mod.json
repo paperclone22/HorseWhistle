@@ -11,7 +11,7 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/jbossjaslow/HorseWhistle"
 	},
-	"license": "MIT",
+	"license": "Apache",
 	"icon": "assets/horse_whistle/icon.png",
 	"environment": "*",
 	"entrypoints": {

@@ -1,5 +1,6 @@
 package io.github.jbossjaslow.horse_whistle;
 
+import io.github.jbossjaslow.horse_whistle.config.HorseWhistleConfig;
 import io.github.jbossjaslow.horse_whistle.items.HorseWhistleItem;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -15,6 +16,8 @@ import org.slf4j.LoggerFactory;
 public class HorseWhistle implements ModInitializer {
 	public static final String MOD_ID = "horse_whistle";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+	public static final HorseWhistleConfig CONFIG = HorseWhistleConfig.createAndLoad();
 
 	public static final Item HORSE_WHISTLE_ITEM = new HorseWhistleItem(new FabricItemSettings());
 
