@@ -56,7 +56,10 @@ public class HorseWhistleItem extends Item {
 
         if (user.getPose() == EntityPose.CROUCHING) {
             if (NBTUtil.hasNBTFor(stack, HORSE_ID_KEY)) {
-                HotBarUtil.displayActionBarText("Removed attunement from " + NBTUtil.getNBTFrom(stack, HORSE_NAME_KEY));
+                HotBarUtil.displayActionBarText(
+                        "Removed attunement from " + NBTUtil.getNBTFrom(stack, HORSE_NAME_KEY),
+                        user,
+                        Formatting.GREEN);
                 NBTUtil.removeNBTFrom(stack, HORSE_ID_KEY);
                 NBTUtil.removeNBTFrom(stack, HORSE_NAME_KEY);
                 user.getWorld().playSound(
@@ -105,7 +108,10 @@ public class HorseWhistleItem extends Item {
                     return TypedActionResult.consume(stack);
                 }
             }
-            HotBarUtil.displayActionBarText("Could not find " + NBTUtil.getNBTFrom(stack, HORSE_NAME_KEY));
+            HotBarUtil.displayActionBarText(
+                    "Could not find " + NBTUtil.getNBTFrom(stack, HORSE_NAME_KEY),
+                    user,
+                    Formatting.GREEN);
         }
 
         return TypedActionResult.fail(stack);
@@ -140,7 +146,10 @@ public class HorseWhistleItem extends Item {
                 NBTUtil.writeNBTTo(stack, HORSE_NAME_KEY, horseEntity.getName().getString());
             }
 
-            HotBarUtil.displayActionBarText("Attuned whistle to " + NBTUtil.getNBTFrom(stack, HORSE_NAME_KEY));
+            HotBarUtil.displayActionBarText(
+                    "Attuned whistle to " + NBTUtil.getNBTFrom(stack, HORSE_NAME_KEY),
+                    user,
+                    Formatting.GREEN);
             return ActionResult.success(false);
         } else {
             return ActionResult.PASS;

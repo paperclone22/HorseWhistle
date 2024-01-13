@@ -1,3 +1,9 @@
 {
-  "item.horse_whistle.horse_whistle_item": "Horse Whistle"
+  "item.horse_whistle.horse_whistle_item": "Horse Whistle",
+
+  "text.config.horse-whistle-config.option.searchRadius": "Search Radius",
+  "text.config.horse-whistle-config.option.searchRadius.tooltip": "The radius around the player in which to search for your horse. Default is 500",
+
+  "text.config.horse-whistle-config.option.durability": "Item durability",
+  "text.config.horse-whistle-config.option.durability.tooltip": "The base durability of the Horse Whistle item. Default is 16"
 }
